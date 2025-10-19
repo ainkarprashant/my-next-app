@@ -6,7 +6,8 @@ export default function Navbar() {
         <li><a href="/" style={{ textDecoration: 'none', color: '#fff' }}>Home</a></li>
         <li><a href="/about" style={{ textDecoration: 'none', color: '#fff' }}>About</a></li>
         <li><a href="/sample" style={{ textDecoration: 'none', color: '#fff' }}>Sample</a></li>
-        <li><a href="/contact" style={{ textDecoration: 'none', color: '#fff' }}>Contact</a></li>
+  <li><a href="/career" style={{ textDecoration: 'none', color: '#fff' }}>Career</a></li>
+  <li><a href="/contact" style={{ textDecoration: 'none', color: '#fff' }}>Contact</a></li>
       </ul>
     </nav>
   );
