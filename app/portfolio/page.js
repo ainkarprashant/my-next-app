@@ -30,6 +30,9 @@ export default function Portfolio() {
             }}>{tech}</span>
           ))}
         </div>
+        <p style={{ marginTop: '1.2rem', color: '#444', fontSize: '0.98rem' }}>
+          I use these technologies daily for building scalable APIs, modern web apps, and mobile solutions. I believe in continuous learning and regularly explore new frameworks and tools to stay updated with industry trends.
+        </p>
       </div>
 
       <h3 style={{ fontSize: '1.3rem', color: '#3b2f7f', marginBottom: '0.5rem' }}>Projects</h3>
