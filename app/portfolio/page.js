@@ -13,18 +13,23 @@ export default function Portfolio() {
       </p>
       <div style={{ marginBottom: '2rem' }}>
         <strong style={{ color: '#3b2f7f' }}>Tech Stack:</strong>
-        <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', listStyle: 'none', padding: 0, marginTop: '0.5rem', color: '#1e293b', fontWeight: 500 }}>
-          <li>Laravel</li>
-          <li>AdonisJS</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Angular</li>
-          <li>Flutter</li>
-          <li>MySQL</li>
-          <li>Docker</li>
-          <li>Git</li>
-        </ul>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.75rem' }}>
+          {['Laravel','AdonisJS','Node.js','React','Next.js','Angular','Flutter','MySQL','Docker','Git'].map((tech) => (
+            <span key={tech} style={{
+              display: 'inline-block',
+              padding: '0.5rem 1.1rem',
+              borderRadius: '999px',
+              background: '#6366f1',
+              color: '#fff',
+              fontWeight: 500,
+              fontSize: '1rem',
+              boxShadow: '0 2px 8px #6366f122',
+              border: 'none',
+              cursor: 'pointer',
+              transition: 'background 0.2s',
+            }}>{tech}</span>
+          ))}
+        </div>
       </div>
 
       <h3 style={{ fontSize: '1.3rem', color: '#3b2f7f', marginBottom: '0.5rem' }}>Projects</h3>
