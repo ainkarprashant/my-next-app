@@ -13,9 +13,10 @@ export default function Navbar() {
         <li><a href="/" style={{ textDecoration: 'none', color: '#fbbf24', fontWeight: 500 }}>Home</a></li>
         <li><a href="/about" style={{ textDecoration: 'none', color: '#f3f4f6', fontWeight: 500 }}>About</a></li>
         <li><a href="/sample" style={{ textDecoration: 'none', color: '#a5b4fc', fontWeight: 500 }}>Sample</a></li>
-  <li><a href="/career" style={{ textDecoration: 'none', color: '#f472b6', fontWeight: 500 }}>Career</a></li>
-  <li><a href="/practice" style={{ textDecoration: 'none', color: '#38bdf8', fontWeight: 500 }}>Practice</a></li>
-  <li><a href="/contact" style={{ textDecoration: 'none', color: '#6ee7b7', fontWeight: 500 }}>Contact</a></li>
+        <li><a href="/career" style={{ textDecoration: 'none', color: '#f472b6', fontWeight: 500 }}>Career</a></li>
+        <li><a href="/practice" style={{ textDecoration: 'none', color: '#38bdf8', fontWeight: 500 }}>Practice</a></li>
+        <li><a href="/portfolio" style={{ textDecoration: 'none', color: '#6366f1', fontWeight: 500 }}>Portfolio</a></li>
+        <li><a href="/contact" style={{ textDecoration: 'none', color: '#6ee7b7', fontWeight: 500 }}>Contact</a></li>
       </ul>
     </nav>
   );
