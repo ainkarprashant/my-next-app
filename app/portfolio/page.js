@@ -76,11 +76,33 @@ export default function Portfolio() {
       </div>
 
       <h3 style={{ fontSize: '1.3rem', color: '#3b2f7f', marginBottom: '0.5rem' }}>Contact</h3>
-      <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '2rem' }}>
-        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.5rem', textDecoration: 'none' }}>GitHub</a>
-        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.5rem', textDecoration: 'none' }}>LinkedIn</a>
-        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.5rem', textDecoration: 'none' }}>Email</a>
+      <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '1rem' }}>
+        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.1rem', textDecoration: 'none' }}>GitHub</a>
+        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.1rem', textDecoration: 'none' }}>LinkedIn</a>
+        <a href="#" style={{ color: '#3b2f7f', fontSize: '1.1rem', textDecoration: 'none' }}>Email</a>
       </div>
+
+      {/* Availability CTA */}
+      <div style={{ marginBottom: '1.5rem', padding: '1rem', borderRadius: '12px', background: 'linear-gradient(90deg,#eef2ff, #fce7f3)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+        <div>
+          <div style={{ fontWeight: 700, color: '#3b2f7f', fontSize: '1.05rem' }}>Availability</div>
+          <div style={{ color: '#1f2937' }}>Open to opportunities — available for freelance or full-time roles.</div>
+        </div>
+        <div>
+          <a href="mailto:prashant@example.com" style={{ padding: '0.6rem 1.1rem', background: '#4f46e5', color: '#fff', borderRadius: '999px', textDecoration: 'none', fontWeight: 600 }}>Contact Me</a>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid #e6edf7', paddingTop: '1rem', paddingBottom: '2rem', color: '#334155' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <div>© {new Date().getFullYear()} Prashant Ainkar. All rights reserved.</div>
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <a href="#" style={{ color: '#3b2f7f', textDecoration: 'none' }}>Privacy</a>
+            <a href="#" style={{ color: '#3b2f7f', textDecoration: 'none' }}>Terms</a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
