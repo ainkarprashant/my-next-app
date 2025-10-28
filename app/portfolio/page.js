@@ -1,7 +1,12 @@
+import Image from 'next/image'
+
 export default function Portfolio() {
   return (
     <main style={{ padding: '2rem', minHeight: '60vh', maxWidth: 800, margin: '0 auto', background: '#fff', color: '#222' }}>
-      <h1 style={{ fontSize: '2.5rem', color: '#3b2f7f', marginBottom: '1rem' }}>Prashant Ainkar</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <Image src="/IMG_5147.jpg" alt="Prashant Ainkar" width={140} height={140} style={{ borderRadius: '999px', boxShadow: '0 8px 30px rgba(16,24,40,0.12)' }} />
+      </div>
+      <h1 style={{ fontSize: '2.5rem', color: '#3b2f7f', marginBottom: '1rem', textAlign: 'center' }}>Prashant Ainkar</h1>
       <h2 style={{ fontSize: '1.5rem', color: '#1e293b', marginBottom: '1rem' }}>Senior Software Developer</h2>
       <p style={{ fontSize: '1.1rem', color: '#222', marginBottom: '2rem' }}>
         I am a full-stack developer with experience in Laravel, AdonisJS, React, Angular, and Flutter. I enjoy building scalable APIs and modern UI web apps.
