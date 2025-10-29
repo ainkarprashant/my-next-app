@@ -19,7 +19,7 @@ export default function Portfolio() {
       <div style={{ marginBottom: '2rem' }}>
         <strong style={{ color: '#3b2f7f' }}>Tech Stack:</strong>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.75rem' }}>
-          {['Laravel','AdonisJS','Node.js','React','Next.js','Angular','Flutter','MySQL','Docker','Git'].map((tech) => (
+          {['Laravel','AdonisJS','Node.js','React','Next.js','Angular','Flutter','MySQL','Docker','Git', 'n8n', ].map((tech) => (
             <span key={tech} style={{
               display: 'inline-block',
               padding: '0.5rem 1.1rem',
