@@ -45,7 +45,7 @@ export default function MotivationPage(){
         <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
           <Image src="/IMG_5147.jpg" alt="Prashant" width={64} height={64} style={{ borderRadius: 999 }} />
           <div>
-            <div style={{ fontSize: 20, fontWeight: 700 }}>Motivation</div>
+            <div style={{ fontSize: 20, fontWeight: 700, color: '#111827' }}>Motivation</div>
             <div style={{ color: '#374151' }}>Short quotes to boost your day</div>
           </div>
         </div>
