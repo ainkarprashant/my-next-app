@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const QUOTES = [
@@ -26,7 +26,15 @@ const QUOTES = [
 ];
 
 export default function MotivationPage(){
-  const [idx, setIdx] = useState(Math.floor(Math.random() * QUOTES.length));
+  const [idx, setIdx] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // pick an initial random quote only on the client after mount to avoid SSR/client markup mismatch
+    const i = Math.floor(Math.random() * QUOTES.length);
+    setIdx(i);
+    setMounted(true);
+  }, []);
 
   function nextQuote(){
     let i = Math.floor(Math.random() * QUOTES.length);
@@ -52,11 +60,11 @@ export default function MotivationPage(){
 
         <div style={{ background: 'linear-gradient(180deg,#ffffff,#f8fafc)', padding: 24, borderRadius: 12, boxShadow: '0 10px 30px rgba(2,6,23,0.08)', display: 'flex', flexDirection: 'column', gap: 12 }}>
           <div style={{ fontSize: 18, color: '#111827', minHeight: 72 }}>
-            “{QUOTES[idx]}”
+            {mounted ? `“${QUOTES[idx]}”` : 'Loading quote...'}
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ color: '#6b7280', fontSize: 13 }}>Quote {idx + 1} of {QUOTES.length}</div>
+            <div style={{ color: '#6b7280', fontSize: 13 }}>{mounted ? `Quote ${idx + 1} of ${QUOTES.length}` : ''}</div>
             <div>
               <button onClick={nextQuote} style={{ padding: '8px 14px', background: '#4f46e5', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer' }}>New Quote</button>
             </div>
