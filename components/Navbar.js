@@ -15,8 +15,9 @@ export default function Navbar() {
         <li><a href="/sample" style={{ textDecoration: 'none', color: '#a5b4fc', fontWeight: 500 }}>Sample</a></li>
         <li><a href="/career" style={{ textDecoration: 'none', color: '#f472b6', fontWeight: 500 }}>Career</a></li>
         <li><a href="/practice" style={{ textDecoration: 'none', color: '#38bdf8', fontWeight: 500 }}>Practice</a></li>
-        <li><a href="/portfolio" style={{ textDecoration: 'none', color: '#6366f1', fontWeight: 500 }}>Portfolio</a></li>
-        <li><a href="/contact" style={{ textDecoration: 'none', color: '#6ee7b7', fontWeight: 500 }}>Contact</a></li>
+  <li><a href="/portfolio" style={{ textDecoration: 'none', color: '#6366f1', fontWeight: 500 }}>Portfolio</a></li>
+  <li><a href="/motivation" style={{ textDecoration: 'none', color: '#fcd34d', fontWeight: 500 }}>Motivation</a></li>
+  <li><a href="/contact" style={{ textDecoration: 'none', color: '#6ee7b7', fontWeight: 500 }}>Contact</a></li>
       </ul>
     </nav>
   );
