@@ -23,6 +23,12 @@ const QUOTES = [
   "Push yourself, because no one else is going to do it for you.",
   "Great things never come from comfort zones.",
   "Work hard in silence, let success make the noise."
+  ,
+  "Stay patient and trust your journey.",
+  "Focus on being productive instead of busy.",
+  "Small progress is still progress.",
+  "Consistency compounds; keep showing up.",
+  "You don't have to be perfect to be amazing."
 ];
 
 export default function MotivationPage(){
