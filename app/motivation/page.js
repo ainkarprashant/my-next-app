@@ -39,14 +39,40 @@ const QUOTES = [
 
 export default function MotivationPage(){
   const [idx, setIdx] = useState(0);
+  const [copied, setCopied] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // try to restore last shown quote from localStorage (persisted index)
+    try {
+      const saved = typeof window !== 'undefined' ? localStorage.getItem('motivation_idx') : null;
+      if (saved !== null) {
+        const parsed = parseInt(saved, 10);
+        if (!isNaN(parsed) && parsed >= 0 && parsed < QUOTES.length) {
+          setIdx(parsed);
+          setMounted(true);
+          return;
+        }
+      }
+    } catch (e) {
+      // ignore localStorage errors
+    }
+
     // pick an initial random quote only on the client after mount to avoid SSR/client markup mismatch
     const i = Math.floor(Math.random() * QUOTES.length);
     setIdx(i);
     setMounted(true);
   }, []);
+
+  // persist current quote index so it survives page reloads
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      localStorage.setItem('motivation_idx', String(idx));
+    } catch (e) {
+      // ignore
+    }
+  }, [idx, mounted]);
 
   function nextQuote(){
     let i = Math.floor(Math.random() * QUOTES.length);
@@ -57,6 +83,51 @@ export default function MotivationPage(){
       }
     }
     setIdx(i);
+  }
+
+  // share the current quote via Twitter
+  function shareTwitter(){
+    try{
+      const text = `“${QUOTES[idx]}”`;
+      const url = typeof window !== 'undefined' ? window.location.href : '';
+      const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}${url ? '&url=' + encodeURIComponent(url) : ''}`;
+      window.open(shareUrl, '_blank', 'noopener,noreferrer');
+    }catch(e){
+      // ignore
+    }
+  }
+
+  // share the current page via LinkedIn (LinkedIn share accepts a URL)
+  function shareLinkedIn(){
+    try{
+      const url = typeof window !== 'undefined' ? window.location.href : '';
+      const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+      window.open(shareUrl, '_blank', 'noopener,noreferrer');
+    }catch(e){
+      // ignore
+    }
+  }
+
+  // copy current quote to clipboard with small feedback
+  async function copyQuote(){
+    try{
+      const text = `“${QUOTES[idx]}”`;
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        await navigator.clipboard.writeText(text);
+      } else {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }catch(e){
+      // ignore
+    }
   }
 
   return (
@@ -77,7 +148,10 @@ export default function MotivationPage(){
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ color: '#6b7280', fontSize: 13 }}>{mounted ? `Quote ${idx + 1} of ${QUOTES.length}` : ''}</div>
-            <div>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+              <button onClick={copyQuote} style={{ padding: '6px 10px', background: '#eef2ff', color: '#1f2937', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>{copied ? 'Copied!' : 'Copy'}</button>
+              <button onClick={shareTwitter} style={{ padding: '6px 10px', background: '#1da1f2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>Twitter</button>
+              <button onClick={shareLinkedIn} style={{ padding: '6px 10px', background: '#0a66c2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>LinkedIn</button>
               <button onClick={nextQuote} style={{ padding: '8px 14px', background: '#4f46e5', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer' }}>New Quote</button>
             </div>
           </div>
