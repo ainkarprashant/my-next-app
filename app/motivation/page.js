@@ -29,6 +29,12 @@ const QUOTES = [
   "Small progress is still progress.",
   "Consistency compounds; keep showing up.",
   "You don't have to be perfect to be amazing."
+  ,
+  "Leadership is not about titles; it's about impact, influence, and inspiration.",
+  "Creativity is intelligence having fun. — Albert Einstein",
+  "Resilience is the capacity to recover quickly from difficulties.",
+  "Mindfulness: do one thing at a time and do it well.",
+  "Productivity comes from focus — eliminate distractions and finish what matters."
 ];
 
 export default function MotivationPage(){
