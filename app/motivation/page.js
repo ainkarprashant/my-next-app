@@ -40,12 +40,7 @@ const QUOTES = [
   "Act as if what you do makes a difference. It does. — William James",
   "Opportunities don't happen. You create them. — Chris Grosser",
   "Do something today that your future self will thank you for.",
-  "The secret of getting ahead is getting started. — Mark Twain",
-  "If you're going through hell, keep going. — Winston Churchill",
-  "Small deeds done are better than great deeds planned. — Peter Marshall",
-  "The best way out is always through. — Robert Frost",
-  "What you do today can improve all your tomorrows. — Ralph Marston",
-  "Aim for progress, not perfection."
+  "The secret of getting ahead is getting started. — Mark Twain"
 ];
 
 export default function MotivationPage(){
