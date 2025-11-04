@@ -137,28 +137,28 @@ export default function MotivationPage(){
   }
 
   return (
-    <main style={{ padding: 24, minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <main style={{ padding: 28, minHeight: '65vh', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'linear-gradient(180deg,#f5f7ff 0%,#ffffff 40%)' }}>
       <div style={{ maxWidth: 760, width: '100%' }}>
-        <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
-          <Image src="/IMG_5147.jpg" alt="Prashant" width={64} height={64} style={{ borderRadius: 999 }} />
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 14 }}>
+          <Image src="/IMG_5147.jpg" alt="Prashant" width={72} height={72} style={{ borderRadius: 999, boxShadow: '0 6px 18px rgba(15,23,42,0.12)' }} />
           <div>
-            <div style={{ fontSize: 20, fontWeight: 700, color: '#111827' }}>Motivation</div>
-            <div style={{ color: '#374151' }}>Short quotes to boost your day</div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: '#0f172a' }}>Motivation</div>
+            <div style={{ color: '#475569' }}>Short quotes to boost your day</div>
           </div>
         </div>
 
-        <div style={{ background: 'linear-gradient(180deg,#ffffff,#f8fafc)', padding: 24, borderRadius: 12, boxShadow: '0 10px 30px rgba(2,6,23,0.08)', display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <div style={{ fontSize: 18, color: '#111827', minHeight: 72 }}>
+        <div style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.85), rgba(248,250,252,0.75))', padding: 28, borderRadius: 14, boxShadow: '0 12px 30px rgba(15,23,42,0.06)', display: 'flex', flexDirection: 'column', gap: 14, border: '1px solid rgba(15,23,42,0.04)', backdropFilter: 'blur(6px)' }}>
+          <div style={{ fontSize: 20, color: '#0b1220', minHeight: 88, lineHeight: 1.4, fontStyle: 'italic' }}>
             {mounted ? `“${QUOTES[idx]}”` : 'Loading quote...'}
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ color: '#6b7280', fontSize: 13 }}>{mounted ? `Quote ${idx + 1} of ${QUOTES.length}` : ''}</div>
-            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-              <button onClick={copyQuote} style={{ padding: '6px 10px', background: '#eef2ff', color: '#1f2937', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>{copied ? 'Copied!' : 'Copy'}</button>
-              <button onClick={shareTwitter} style={{ padding: '6px 10px', background: '#1da1f2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>Twitter</button>
-              <button onClick={shareLinkedIn} style={{ padding: '6px 10px', background: '#0a66c2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13 }}>LinkedIn</button>
-              <button onClick={nextQuote} style={{ padding: '8px 14px', background: '#4f46e5', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer' }}>New Quote</button>
+            <div style={{ color: '#64748b', fontSize: 13 }}>{mounted ? `Quote ${idx + 1} of ${QUOTES.length}` : ''}</div>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+              <button onClick={copyQuote} style={{ padding: '8px 12px', background: '#eef2ff', color: '#0f172a', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13, boxShadow: '0 4px 10px rgba(79,70,229,0.12)', transition: 'transform .12s ease' }}>{copied ? 'Copied!' : 'Copy'}</button>
+              <button onClick={shareTwitter} style={{ padding: '8px 12px', background: '#1da1f2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13, boxShadow: '0 4px 10px rgba(29,161,242,0.14)', transition: 'transform .12s ease' }}>Twitter</button>
+              <button onClick={shareLinkedIn} style={{ padding: '8px 12px', background: '#0a66c2', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 13, boxShadow: '0 4px 10px rgba(10,102,194,0.14)', transition: 'transform .12s ease' }}>LinkedIn</button>
+              <button onClick={nextQuote} style={{ padding: '10px 16px', background: '#6d28d9', color: '#fff', border: 'none', borderRadius: 999, cursor: 'pointer', fontSize: 14, fontWeight: 600, boxShadow: '0 8px 24px rgba(109,40,217,0.12)', transition: 'transform .12s ease' }}>New Quote</button>
             </div>
           </div>
         </div>
