@@ -3,44 +3,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const QUOTES = [
-  "The only way to do great work is to love what you do. — Steve Jobs",
-  "Don't watch the clock; do what it does. Keep going. — Sam Levenson",
-  "Success is not final, failure is not fatal: It is the courage to continue that counts. — Winston Churchill",
-  "Believe you can and you're halfway there. — Theodore Roosevelt",
-  "The future depends on what you do today. — Mahatma Gandhi",
-  "Start where you are. Use what you have. Do what you can. — Arthur Ashe",
-  "You are never too old to set another goal or to dream a new dream. — C.S. Lewis",
-  "What we achieve inwardly will change outer reality. — Plutarch",
-  "Hardships often prepare ordinary people for an extraordinary destiny. — C.S. Lewis",
-  "Perseverance is not a long race; it is many short races one after another. — Walter Elliot",
-  "The harder you work for something, the greater you'll feel when you achieve it.",
-  "Don't stop when you're tired. Stop when you're done.",
-  "Dream it. Wish it. Do it.",
-  "Little things make big days.",
-  "It's going to be hard, but hard does not mean impossible.",
-  "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
-  "The key to success is to focus on goals, not obstacles.",
-  "Push yourself, because no one else is going to do it for you.",
-  "Great things never come from comfort zones.",
-  "Work hard in silence, let success make the noise."
-  ,
-  "Stay patient and trust your journey.",
-  "Focus on being productive instead of busy.",
-  "Small progress is still progress.",
-  "Consistency compounds; keep showing up.",
-  "You don't have to be perfect to be amazing."
-  ,
-  "Leadership is not about titles; it's about impact, influence, and inspiration.",
-  "Creativity is intelligence having fun. — Albert Einstein",
-  "Resilience is the capacity to recover quickly from difficulties.",
-  "Mindfulness: do one thing at a time and do it well.",
-  "Productivity comes from focus — eliminate distractions and finish what matters."
-  ,
-  "You miss 100% of the shots you don't take. — Wayne Gretzky",
-  "Act as if what you do makes a difference. It does. — William James",
-  "Opportunities don't happen. You create them. — Chris Grosser",
-  "Do something today that your future self will thank you for.",
-  "The secret of getting ahead is getting started. — Mark Twain"
+  "Start small. Think big. Act now.",
+  "Progress is made by doing, not by intending.",
+  "Courage over comfort; growth follows.",
+  "Clarity comes from engagement, not thought.",
+  "Make it better than yesterday."
 ];
 
 export default function MotivationPage(){
