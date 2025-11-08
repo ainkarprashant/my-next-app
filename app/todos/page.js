@@ -57,7 +57,7 @@ export default function TodosPage(){
             value={text}
             onChange={e => setText(e.target.value)}
             placeholder="Add a new task..."
-            style={{ flex: 1, padding: '10px 12px', borderRadius: 10, border: '1px solid rgba(15,23,42,0.08)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.6)' }}
+            style={{ flex: 1, padding: '10px 12px', borderRadius: 10, border: '1px solid rgba(15,23,42,0.08)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.6)', background: '#ffffff', color: '#0b1220', outline: 'none', fontSize: 15 }}
           />
           <button style={{ padding: '10px 14px', borderRadius: 10, background: '#6d28d9', color: '#fff', border: 'none', cursor: 'pointer' }} onClick={addTask}>Add</button>
         </form>
