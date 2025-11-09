@@ -79,12 +79,12 @@ export default function TodosPage(){
   }
 
   return (
-    <main style={{ padding: 28, minHeight: '65vh', display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: 760, maxWidth: '96%' }}>
+    <main style={{ padding: 28, minHeight: '65vh', display: 'flex', justifyContent: 'center', background: '#f8fafc' }}>
+      <div style={{ width: 760, maxWidth: '96%', background: '#ffffff', padding: 20, borderRadius: 12, boxShadow: '0 10px 30px rgba(2,6,23,0.04)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
           <div>
-            <h2 style={{ fontSize: 22, margin: 0, color: '#0f172a' }}>To‑Do</h2>
-            <div style={{ color: '#64748b', fontSize: 13 }}>A simple client-side to-do list. Items persist to your browser.</div>
+            <h2 style={{ fontSize: 22, margin: 0, color: '#071021' }}>To‑Do</h2>
+            <div style={{ color: '#475569', fontSize: 13 }}>A simple client-side to-do list. Items persist to your browser.</div>
           </div>
           <div style={{ display: 'flex', gap: 8 }}>
             <button onClick={clearCompleted} style={{ padding: '8px 10px', borderRadius: 8, background: '#f1f5f9', color: '#0f172a', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Clear completed</button>
@@ -98,16 +98,16 @@ export default function TodosPage(){
             value={text}
             onChange={e => setText(e.target.value)}
             placeholder="Add a new task..."
-            style={{ flex: 1, padding: '12px 14px', borderRadius: 12, border: '1px solid rgba(15,23,42,0.06)', background: '#fff', color: '#0b1220', outline: 'none', fontSize: 15 }}
+            style={{ flex: 1, padding: '12px 14px', borderRadius: 12, border: '1px solid rgba(15,23,42,0.08)', background: '#ffffff', color: '#071021', outline: 'none', fontSize: 15 }}
           />
-          <button style={{ padding: '10px 16px', borderRadius: 12, background: '#6d28d9', color: '#fff', border: 'none', cursor: 'pointer' }} onClick={addTask}>Add</button>
+          <button style={{ padding: '10px 16px', borderRadius: 12, background: '#4f46e5', color: '#fff', border: 'none', cursor: 'pointer', boxShadow: '0 8px 20px rgba(79,70,229,0.12)' }} onClick={addTask}>Add</button>
         </form>
 
         <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
-          <button onClick={() => setFilter('all')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'all' ? '#eef2ff' : '#f8fafc', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>All</button>
-          <button onClick={() => setFilter('active')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'active' ? '#eef2ff' : '#f8fafc', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Active</button>
-          <button onClick={() => setFilter('completed')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'completed' ? '#eef2ff' : '#f8fafc', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Completed</button>
-          <div style={{ marginLeft: 'auto', color: '#64748b', alignSelf: 'center' }}>{tasks.length} items</div>
+          <button onClick={() => setFilter('all')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'all' ? '#4f46e5' : '#f1f5f9', color: filter === 'all' ? '#fff' : '#071021', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>All</button>
+          <button onClick={() => setFilter('active')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'active' ? '#4f46e5' : '#f1f5f9', color: filter === 'active' ? '#fff' : '#071021', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Active</button>
+          <button onClick={() => setFilter('completed')} style={{ padding: '6px 10px', borderRadius: 8, background: filter === 'completed' ? '#4f46e5' : '#f1f5f9', color: filter === 'completed' ? '#fff' : '#071021', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Completed</button>
+          <div style={{ marginLeft: 'auto', color: '#475569', alignSelf: 'center' }}>{tasks.length} items</div>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -116,7 +116,7 @@ export default function TodosPage(){
           )}
 
           {tasks.filter(t => filter === 'all' ? true : filter === 'active' ? !t.done : t.done).map(task => (
-            <div key={task.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 12, borderRadius: 10, background: '#fff', border: '1px solid rgba(15,23,42,0.04)', boxShadow: '0 6px 18px rgba(15,23,42,0.04)' }}>
+            <div key={task.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 12, borderRadius: 10, background: '#ffffff', border: '1px solid rgba(15,23,42,0.04)', boxShadow: '0 6px 18px rgba(15,23,42,0.04)' }}>
               <div style={{ display: 'flex', gap: 12, alignItems: 'center', width: '100%' }}>
                 <input type="checkbox" checked={!!task.done} onChange={() => toggleDone(task.id)} />
                 {editingId === task.id ? (
@@ -126,15 +126,15 @@ export default function TodosPage(){
                     onKeyDown={e => { if(e.key === 'Enter') saveEdit(task.id); if(e.key === 'Escape') cancelEdit(); }}
                     onBlur={() => saveEdit(task.id)}
                     autoFocus
-                    style={{ flex: 1, padding: '8px 10px', borderRadius: 8, border: '1px solid rgba(15,23,42,0.06)' }}
+                    style={{ flex: 1, padding: '8px 10px', borderRadius: 8, border: '1px solid rgba(15,23,42,0.08)', background: '#fbfbff', color: '#071021' }}
                   />
                 ) : (
-                  <div onDoubleClick={() => startEdit(task)} style={{ color: task.done ? '#94a3b8' : '#0b1220', textDecoration: task.done ? 'line-through' : 'none', flex: 1 }}>{task.text}</div>
+                  <div onDoubleClick={() => startEdit(task)} style={{ color: task.done ? '#94a3b8' : '#071021', textDecoration: task.done ? 'line-through' : 'none', flex: 1 }}>{task.text}</div>
                 )}
               </div>
               <div style={{ display: 'flex', gap: 8 }}>
-                <button onClick={() => startEdit(task)} style={{ padding: '6px 10px', borderRadius: 8, background: '#f8fafc', color: '#0f172a', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Edit</button>
-                <button onClick={() => removeTask(task.id)} style={{ padding: '6px 10px', borderRadius: 8, background: '#fee2e2', color: '#b91c1c', border: 'none', cursor: 'pointer' }}>Delete</button>
+                <button onClick={() => startEdit(task)} style={{ padding: '6px 10px', borderRadius: 8, background: '#eef2ff', color: '#0f172a', border: '1px solid rgba(15,23,42,0.04)', cursor: 'pointer' }}>Edit</button>
+                <button onClick={() => removeTask(task.id)} style={{ padding: '6px 10px', borderRadius: 8, background: '#ef4444', color: '#fff', border: 'none', cursor: 'pointer' }}>Delete</button>
               </div>
             </div>
           ))}
