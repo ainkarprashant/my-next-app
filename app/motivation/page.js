@@ -3,11 +3,18 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const QUOTES = [
-  "Start small. Think big. Act now.",
-  "Progress is made by doing, not by intending.",
-  "Courage over comfort; growth follows.",
-  "Clarity comes from engagement, not thought.",
-  "Make it better than yesterday."
+  "Do the hard things now. The easy things take care of themselves.",
+  "Practice patience — progress often comes in invisible steps.",
+  "Ship imperfect work; iterate quickly and learn.",
+  "Great focus beats scattered effort — protect your attention.",
+  "Turn ideas into small experiments and measure what matters.",
+  "Consistency wins over intensity — show up a little every day.",
+  "Ask better questions; the right questions unlock new paths.",
+  "Be curious. Try more. Fail fast. Improve faster.",
+  "Lead by example — influence starts with what you do, not what you say.",
+  "Make space to rest; resilience is built between the sprints.",
+  "Progress is a series of tiny choices compounded over time.",
+  "Focus on outcomes, not busyness. Move the needle."
 ];
 
 export default function MotivationPage(){
