@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const QUOTES = [
-  "Do the hard things now. The easy things take care of themselves.",
-  "Practice patience — progress often comes in invisible steps.",
-  "Ship imperfect work; iterate quickly and learn.",
-  "Great focus beats scattered effort — protect your attention.",
-  "Turn ideas into small experiments and measure what matters.",
-  "Consistency wins over intensity — show up a little every day.",
-  "Ask better questions; the right questions unlock new paths.",
-  "Be curious. Try more. Fail fast. Improve faster.",
-  "Lead by example — influence starts with what you do, not what you say.",
-  "Make space to rest; resilience is built between the sprints.",
-  "Progress is a series of tiny choices compounded over time.",
-  "Focus on outcomes, not busyness. Move the needle."
+  "Start with one small step — momentum grows from movement.",
+  "Do less, finish more — focused work creates real outcomes.",
+  "Learn in public: show work early, gather feedback, improve.",
+  "Choose progress over perfection; every iteration teaches you something.",
+  "Protect your attention — block time for deep work daily.",
+  "Celebrate small wins; they compound into big change.",
+  "Make decisions with a bias toward action and clear metrics.",
+  "Build systems, not just goals; habits turn effort into results.",
+  "Ask questions that expand possibilities, not limit them.",
+  "Rest is part of the work. Recovery enables consistency.",
+  "Focus on impact — what moves the needle matters most.",
+  "Start imperfectly, improve quickly, and keep going."
 ];
 
 export default function MotivationPage(){
