@@ -15,6 +15,17 @@ const QUOTES = [
   "Rest is part of the work. Recovery enables consistency.",
   "Focus on impact — what moves the needle matters most.",
   "Start imperfectly, improve quickly, and keep going."
+  ,
+  "Break big goals into tiny experiments — learn from outcomes.",
+  "Clarity beats hustle: define the outcome before the work.",
+  "Sustainable momentum comes from routines, not sprints.",
+  "Be generous with feedback — it accelerates growth for everyone.",
+  "Use constraints to guide creativity, not limit it.",
+  "Write less, deliver more — simplicity scales better.",
+  "Protect deep work by turning off context switches.",
+  "Turn ideas into prototypes quickly and test assumptions.",
+  "Focus on the next right action, not the perfect plan.",
+  "Start each day with one meaningful task and finish it."
 ];
 
 export default function MotivationPage(){
