@@ -1,9 +1,8 @@
 import db from "@/config/db";
 
 const page = async () => {
-    
+
   const [rows] = await db.execute("select * from products");
-  console.log('rows from db', rows);
 
   return (
     <div style={{ padding: '2rem' , color: '#0b1220' }}>
